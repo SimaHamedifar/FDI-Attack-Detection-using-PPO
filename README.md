@@ -18,3 +18,27 @@ This repository implements a reinforcement learning-based False Data Injection (
    ```bash
    git clone https://github.com/your-username/fdi-detection-ppo.git
    cd fdi-detection-ppo
+
+2. Create a virtual environment and install dependencies:
+  python3 -m venv venv
+  source venv/bin/activate  # On Windows: venv\Scripts\activate
+  pip install -r requirements.txt
+
+## How to Run.
+1. Dataset: Download the dataset in data/ folder.
+2. Train the predictor model.
+3. Test the predictor model to make the data for the next steps.
+4. Train the Belief network (with optional flags).
+   python train.py --log True --plot True 
+5. Test the Belief network to make the data for the next steps.
+6. Train the PPO agent.
+7. Test the PPO agent.
+   python test.py --model_path checkpoints/ppo_agent.pth
+
+## Model Structure
+•	prediction_model.py: BiLSTM-based time series predictor.
+• belief_model.py: Multi-head attention-based belief network.
+•	ppo.py: PPO actor-critic.
+•	environment.py: Custom Gym environment with attack simulation.
+•	networks.py: Neural networks for actor and critic.
+
