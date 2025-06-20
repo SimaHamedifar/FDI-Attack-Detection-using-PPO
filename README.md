@@ -17,7 +17,7 @@ This repository implements a reinforcement learning-based False Data Injection (
 
    ```bash
    git clone https://github.com/SimaHamedifar/fdi-detection-ppo.git
-   cd fdi-detection-ppo
+   cd FDI-Attack-Detection-PPO
 
 2. Create a virtual environment and install dependencies:
   python3 -m venv venv
