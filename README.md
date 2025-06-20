@@ -7,8 +7,8 @@ This repository implements a reinforcement learning-based False Data Injection (
 - **Goal**: Detect anomalies or FDI attacks in power consumption data.
 - **Approach**: Custom OpenAI Gym environment + PPO agent with adaptive thresholding.
 - **Features**:
-  - Self-attention prediction module.
-  - Belief vector integration for attack probability.
+  - BiLSTM prediction module.
+  - Multi-head self-attention-based Belief vector integration for attack probability.
   - PPO with custom state vector including power, prediction, error, and temporal features.
 
 ## Installation
@@ -16,7 +16,7 @@ This repository implements a reinforcement learning-based False Data Injection (
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/your-username/fdi-detection-ppo.git
+   git clone https://github.com/SimaHamedifar/fdi-detection-ppo.git
    cd fdi-detection-ppo
 
 2. Create a virtual environment and install dependencies:
@@ -28,17 +28,17 @@ This repository implements a reinforcement learning-based False Data Injection (
 1. Dataset: Download the dataset in data/ folder.
 2. Train the predictor model.
 3. Test the predictor model to make the data for the next steps.
-4. Train the Belief network (with optional flags).
-   python train.py --log True --plot True 
+4. Train the Belief network.
 5. Test the Belief network to make the data for the next steps.
 6. Train the PPO agent.
-7. Test the PPO agent.
+   python train.py --log True --plot True 
+8. Test the PPO agent.
    python test.py --model_path checkpoints/ppo_agent.pth
 
 ## Model Structure
-•	prediction_model.py: BiLSTM-based time series predictor.
-• belief_model.py: Multi-head attention-based belief network.
-•	ppo.py: PPO actor-critic.
-•	environment.py: Custom Gym environment with attack simulation.
+•	Predictor.py: BiLSTM-based time series predictor.
+• Belief_model.py: Multi-head attention-based belief network.
+•	agent.py: PPO actor-critic.
+•	environment.py: Custom Gym environment for attack detection.
 •	networks.py: Neural networks for actor and critic.
 
