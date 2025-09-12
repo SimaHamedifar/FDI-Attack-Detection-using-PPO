@@ -27,7 +27,7 @@ data.head()
 train_data = data.iloc[:-1440].copy()
 
 #%%
-Predictions = train_data.predictions
+Predictions = train_data.Prediction
 Measurements = train_data.Scaling_1
 t_h = train_data.hour_cosin
 t_hh = train_data.hour_sin
