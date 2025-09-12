@@ -254,8 +254,8 @@ time_indices = np.arange(0, len(real_seq))
 targets_full = targets_full.reshape(-1,)
 targets_full = 1 - targets_full
 beliefs = probabilities_full.reshape(-1,2)
-dataset = pd.DataFrame(data={'predictions': real_seq[:,0],
-                             'Scaling_2': real_seq[:,1],
+dataset = pd.DataFrame(data={'prediction': real_seq[:,0],
+                             'Scaling_1': real_seq[:,1],
                              'hour_cosin':real_seq_scaled[:,2],
                              'hour_sin':real_seq_scaled[:,3],
                              'minute_cosin':real_seq_scaled[:,4],
