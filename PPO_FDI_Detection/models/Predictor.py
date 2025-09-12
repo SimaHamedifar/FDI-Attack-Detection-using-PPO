@@ -84,7 +84,7 @@ y_pred_inv = Fit_power.inverse_transform(y_pred.reshape(-1, 1))
 
 preds_pd = pd.Series(y_pred_inv.flatten())
 preds_pd.index = test_set.index[time_steps:]
-preds_df = pd.DataFrame(preds_pd, columns=['Predicted_Aggregate_Power'])
+preds_df = pd.DataFrame(preds_pd, columns=['Prediction'])
 preds_df.head()
 
 gt_pd = pd.Series(y_test_inv.flatten(), name="Aggregate")
