@@ -1,6 +1,6 @@
 # FDI Detection in Power Consumption Using PPO
 
-This repository implements a reinforcement learning-based False Data Injection (FDI) detection system for smart home energy data using the Proximal Policy Optimization (PPO) algorithm. The agent learns to dynamically adjust the detection threshold based on time series patterns, self-attention predictions, and belief scores.
+This repository implements a reinforcement learning-based False Data Injection (FDI) attack detection system for smart home energy data using the Proximal Policy Optimization (PPO) algorithm. The agent learns to dynamically adjust the detection threshold based on time series patterns, self-attention predictions, and belief scores.
 
 ## Overview
 
@@ -9,7 +9,7 @@ This repository implements a reinforcement learning-based False Data Injection (
 - **Features**:
   - BiLSTM prediction module.
   - Multi-head self-attention-based Belief vector integration for attack probability.
-  - PPO with custom state vector including power, prediction, error, and temporal features.
+  - PPO implemented using PyTorch with custom state vector including power, prediction, error, and temporal features.
 
 ## Installation
 
